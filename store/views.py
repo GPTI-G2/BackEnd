@@ -1,10 +1,11 @@
 from rest_framework.response import Response
-from django.http import JsonResponse
+from django.http import Http404, JsonResponse
 from rest_framework.views import APIView
 
 from store.models import Product
 
-from .serializers import DummySerializer, ProductResponseSerializer
+from .serializers import DummySerializer, ProductsResponseSerializer
+from .services import build_obj_list, build_obj
 
 
 class DummyView(APIView):
@@ -23,9 +24,22 @@ class ProductsView(APIView):
 
     def get(self, request, *args, **kwargs):
         products = Product.objects.all().order_by("id")
-        # serializer = ProductResponseSerializer(products_list, many=True)
-        print(products)
-        return JsonResponse({"products": products})
+        products_list = build_obj_list(products)
+        serializer = ProductsResponseSerializer(products_list, many=True)
+        return Response({"products": serializer.data})
+
+class ProductView(APIView):
+    def get_product(self, product_id):
+        try:
+            return Product.objects.get(pk=product_id)
+        except Product.DoesNotExist:
+            raise Http404 from None
+
+    def get(self, request, product_id, *args, **kwargs):
+        product = self.get_product(product_id)
+        product_obj = build_obj(product)
+        serializer = ProductsResponseSerializer(product_obj)
+        return Response(serializer.data)
 
 
 # class CategoryView(APIView, PageNumberPagination):
