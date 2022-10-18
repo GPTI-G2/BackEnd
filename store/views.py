@@ -41,7 +41,17 @@ class ProductView(APIView):
         serializer = ProductsResponseSerializer(product_obj)
         return Response(serializer.data)
 
+class StoresView(APIView):
 
+    def get(self, request, *args, **kwargs):
+        return Response({"Information": "This is the stores view"})
+
+
+class ListsView(APIView):
+
+    def get(self, request, *args, **kwargs):
+        return Response({"Information": "This is the lists view"})
+        
 # class CategoryView(APIView, PageNumberPagination):
 #     page_size = 40
 
