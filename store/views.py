@@ -52,7 +52,20 @@ class StoresView(APIView):
 class ListsView(APIView):
 
     def get(self, request, *args, **kwargs):
-        return Response({"Information": "This is the lists view"})
+
+        products_liquidos = Product.objects.filter(store_id=1)
+        products_liquidos_list = build_obj_list(products_liquidos)
+        liquidos_serializer = ProductsResponseSerializer(products_liquidos_list, many=True)
+
+        products_lider = Product.objects.filter(store_id=2)
+        products_lider_list = build_obj_list(products_lider)
+        lider_serializer = ProductsResponseSerializer(products_lider_list, many=True)
+
+        products_jumbo = Product.objects.filter(store_id=3)
+        products_jumbo_list = build_obj_list(products_jumbo)
+        jumbo_serializer = ProductsResponseSerializer(products_jumbo_list, many=True)
+
+        return Response({"Information": "This is the lists view", "Liquidos": liquidos_serializer.data, "Lider": lider_serializer.data, "Jumbo": jumbo_serializer.data})
         
 # class CategoryView(APIView, PageNumberPagination):
 #     page_size = 40
