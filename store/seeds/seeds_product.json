@@ -3,6 +3,20 @@
     "model": "store.product",
     "pk": 1,
     "fields": {
+      "name": "Cerveza Corona botella",
+      "store_id": 1,
+      "sku": "381938",
+      "brand": "Corona",
+      "size": "330 CC x6",
+      "image_url": "https://www.liquidos.cl/productos/746/cerveza-corona-botella-330-cc-x6-liquidos-cl",
+      "price": 5890,
+      "type": "c-corona"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 2,
+    "fields": {
       "name": "Cerveza Lager Botellin",
       "store_id": 2,
       "sku": "730940",
@@ -15,16 +29,184 @@
   },
   {
     "model": "store.product",
-    "pk": 2,
+    "pk": 3,
     "fields": {
-      "name": "Cerveza Corona botella",
-      "store_id": 1,
-      "sku": "381114",
+      "name": "Cerveza Corona Rubia botella",
+      "store_id": 3,
+      "sku": "1850069-PAK",
       "brand": "Corona",
-      "size": "330 CC x6",
-      "image_url": "https://www.liquidos.cl/productos/746/cerveza-corona-botella-330-cc-x6-liquidos-cl",
-      "price": 5890,
+      "size": "Pack 6 un. 330 CC",
+      "image_url": "https://www.jumbo.cl/cerveza-corona-botella-6x330cc-2/p",
+      "price": 6490,
       "type": "c-corona"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 4,
+    "fields": {
+      "name": "Pisco Especial 35º",
+      "store_id": 3,
+      "sku": "1278079",
+      "brand": "Alto del Carmen",
+      "size": "1 L",
+      "image_url": "https://www.jumbo.cl/pisco-alto-del-carmen-1-l-35/p",
+      "price": 8890,
+      "type": "p-alto"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 5,
+    "fields": {
+      "name": "Pisco Especial 35º",
+      "store_id": 2,
+      "sku": "381114",
+      "brand": "Alto del Carmen",
+      "size": "1 L",
+      "image_url": "https://www.lider.cl/supermercado/product/sku/468481/alto-del-carmen-pisco-especial-35-botella-1-l",
+      "price": 9190,
+      "type": "p-alto"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 6,
+    "fields": {
+      "name": "Pisco Alto del Carmen 35 grados",
+      "store_id": 1,
+      "sku": "381756",
+      "brand": "Alto del Carmen",
+      "size": "1 L",
+      "image_url": "https://www.liquidos.cl/productos/1180/pisco-alto-del-carmen-1-litro-35-grados-liquidos-cl",
+      "price": 7950,
+      "type": "p-alto"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 7,
+    "fields": {
+      "name": "Whisky Tennessee 40º",
+      "store_id": 3,
+      "sku": "264243",
+      "brand": "Jack Daniel's",
+      "size": "750 cc",
+      "image_url": "https://www.jumbo.cl/whisky-jack-daniels-750-cc-importado/p",
+      "price": 28490,
+      "type": "w-jack"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 8,
+    "fields": {
+      "name": "Whisky Bourbon N7",
+      "store_id": 2,
+      "sku": "259732",
+      "brand": "Jack Daniel's",
+      "size": "750 ml",
+      "image_url": "https://www.lider.cl/supermercado/product/sku/295463/jack-daniels-whisky-bourbon-n7-750-ml",
+      "price": 29750,
+      "type": "w-jack"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 9,
+    "fields": {
+      "name": "Whisky Jack Daniels N7",
+      "store_id": 2,
+      "sku": "381323",
+      "brand": "Jack Daniel's",
+      "size": "750 cc",
+      "image_url": "https://www.liquidos.cl/productos/2501/whiskey-jack-daniels-n7-750-cc-liquidos-cl",
+      "price": 22990,
+      "type": "w-jack"
+    }
+  }, 
+  {
+    "model": "store.product",
+    "pk": 10,
+    "fields": {
+      "name": "Cerveza Royal Guard Lager",
+      "store_id": 3,
+      "sku": "263658-PAK",
+      "brand": "Royal Guard",
+      "size": "Pack 6 un. 355 CC",
+      "image_url": "https://www.jumbo.cl/pack-cerveza-royal-guard-6-unid-355-cc-c-u/p",
+      "price": 6190,
+      "type": "c-royal"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 11,
+    "fields": {
+      "name": "Pack Cerveza Lager Botellas",
+      "store_id": 2,
+      "sku": "375636",
+      "brand": "Royal Guard",
+      "size": "6 un. x 355 CC",
+      "image_url": "https://www.lider.cl/supermercado/product/sku/304399/royal-guard-pack-cerveza-lager-botellas-6-un",
+      "price": 6390,
+      "type": "c-royal"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 12,
+    "fields": {
+      "name": "Cerveza Royal Guard Lager botella",
+      "store_id": 1,
+      "sku": "123222",
+      "brand": "Royal Guard",
+      "size": "355 CC x6",
+      "image_url": "https://www.liquidos.cl/productos/21710/cervezas-royal-guard-lager-botella-355-x6",
+      "price": 6900,
+      "type": "c-royal"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 13,
+    "fields": {
+      "name": "Pisco Añejado en Roble 35º",
+      "store_id": 3,
+      "sku": "1461150",
+      "brand": "Mistral",
+      "size": "1 L",
+      "image_url": "https://www.jumbo.cl/pisco-mistral-1-l-35/p",
+      "price": 9100,
+      "type": "p-mistral"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 14,
+    "fields": {
+      "name": "Pisco Añejado 35º Botella",
+      "store_id": 2,
+      "sku": "625859",
+      "brand": "Mistral",
+      "size": "1 L",
+      "image_url": "https://www.lider.cl/supermercado/product/sku/589822/mistral-pisco-anejado-35-botella-1-l",
+      "price": 8190,
+      "type": "p-mistral"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 15,
+    "fields": {
+      "name": "Pisco Mistral 35º grados",
+      "store_id": 1,
+      "sku": "989893",
+      "brand": "Mistral",
+      "size": "1 L",
+      "image_url": "https://www.liquidos.cl/productos/2937/pisco-mistral-35-grados-1-litro-liquidos-cl",
+      "price": 7590,
+      "type": "p-mistral"
     }
   }
 ]

@@ -14,5 +14,13 @@
       "name": "Lider",
       "web_url": "https://www.lider.cl/"
     }
+  },
+  {
+    "model": "store.store",
+    "pk": 3,
+    "fields": {
+      "name": "Jumbo",
+      "web_url": "https://www.jumbo.cl/"
+    }
   }
 ]
