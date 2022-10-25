@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 from store.models import Product
 
 from .serializers import DummySerializer, ProductsResponseSerializer
-from .services import build_obj_list, build_obj
+from .services import build_obj_list, build_obj,validate_and_save_data
 
 
 class DummyView(APIView):
@@ -46,7 +46,9 @@ class StoresView(APIView):
     def get(self, request, *args, **kwargs):
         return Response({"Information": "This is the stores view"})
 
-
+    def post(self, request, *args, **kwargs):
+        response = validate_and_save_data(request)
+        return response
 class ListsView(APIView):
 
     def get(self, request, *args, **kwargs):

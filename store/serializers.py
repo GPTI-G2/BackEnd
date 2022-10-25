@@ -32,13 +32,12 @@ class ProductsResponseSerializer(serializers.Serializer):
 
 
 
-# class ProductPostSerializer(serializers.Serializer):
-#     name = serializers.CharField(max_length=180)
-#     store = serializers.CharField(max_length=180, required=False)
-#     category = serializers.CharField(max_length=180)
-#     sku = serializers.CharField(max_length=180)
-#     brand = serializers.CharField(max_length=180)
-#     size = serializers.CharField(max_length=180)
-#     image_url = serializers.CharField(max_length=280)
-#     page_url = serializers.CharField(max_length=280)
-#     is_promotion = serializers.BooleanField(default=False)
+class ProductPostSerializer(serializers.Serializer):
+    name = serializers.CharField(max_length=180)
+    store = serializers.CharField(max_length=180, required=False)
+    sku = serializers.CharField(max_length=180)
+    brand = serializers.CharField(max_length=180)
+    size = serializers.CharField(max_length=180)
+    image_url = serializers.CharField(max_length=280)
+    price = serializers.IntegerField()
+    type = serializers.CharField(max_length=180)
