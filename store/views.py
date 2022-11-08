@@ -66,6 +66,32 @@ class ListsView(APIView):
         jumbo_serializer = ProductsResponseSerializer(products_jumbo_list, many=True)
 
         return Response({"Information": "This is the lists view", "Liquidos": liquidos_serializer.data, "Lider": lider_serializer.data, "Jumbo": jumbo_serializer.data})
+
+class ListView(APIView):
+
+    def get(self, request, *args, **kwargs):
+
+        coronas = Product.objects.filter(type="c-corona").order_by("price")
+        coronas_list = build_obj_list(coronas)
+        corona_serialize = ProductsResponseSerializer(coronas_list, many=True)
+
+        alto = Product.objects.filter(type="p-alto").order_by("price")
+        alto_list = build_obj_list(alto)
+        alto_serialize = ProductsResponseSerializer(alto_list, many=True)
+
+        jack = Product.objects.filter(type="w-jack").order_by("price")
+        jack_list = build_obj_list(jack)
+        jack_serialize = ProductsResponseSerializer(jack_list, many=True)
+
+        royal = Product.objects.filter(type="c-royal").order_by("price")
+        royal_list = build_obj_list(royal)
+        royal_serialize = ProductsResponseSerializer(royal_list, many=True)
+
+        mistral = Product.objects.filter(type="p-mistral").order_by("price")
+        mistral_list = build_obj_list(mistral)
+        mistral_serialize = ProductsResponseSerializer(mistral_list, many=True)
+
+        return Response({"Information": "This is the cheapest list view", "Corona": corona_serialize.data[0], "Alto del Carmen": alto_serialize.data[0], "Jack Daniels": jack_serialize.data[0], "Royal": royal_serialize.data[0], "Mistral": mistral_serialize.data[0]})
         
 # class CategoryView(APIView, PageNumberPagination):
 #     page_size = 40
