@@ -50,23 +50,52 @@ class StoresView(APIView):
         response = validate_and_save_data(request)
         return response
 class ListsView(APIView):
+    def get_products(self, product_id):
+        try:
+            return Product.objects.get(pk=product_id)
+        except Product.DoesNotExist:
+            return None
 
     def get(self, request, *args, **kwargs):
+        products_type= request.GET.get('products', None)
+        
+        if products_type:
+            products_type = products_type.split(',')
+            liquidos_list = []
+            lider_list = []
+            jumbo_list = []
+            mix_list = []
+            for p_type in products_type:
+                try:
+                    p1 = Product.objects.all().filter(store_id=1, type=p_type).order_by("price").first()
+                    p1 = build_obj(p1)
+                    liquidos_list.append(p1)
+                except Product.DoesNotExist:
+                    pass
+                try:
+                    p2 = Product.objects.all().filter(store_id=2, type=p_type).order_by("price").first()
+                    p2 = build_obj(p2)
+                    lider_list.append(p2)
+                except Product.DoesNotExist:
+                    pass
+                try:
+                    p3 = Product.objects.all().filter(store_id=3, type=p_type).order_by("price").first()
+                    p3 = build_obj(p3)
+                    jumbo_list.append(p3)
+                except Product.DoesNotExist:
+                    pass
+                
+            for i in range(len(liquidos_list)):
+                lista = [liquidos_list[i], lider_list[i], jumbo_list[i]]
+                sorted_list = sorted(lista, key=lambda x: x['price'])
+                mix_list.append(sorted_list[0])
 
-        products_liquidos = Product.objects.filter(store_id=1)
-        products_liquidos_list = build_obj_list(products_liquidos)
-        liquidos_serializer = ProductsResponseSerializer(products_liquidos_list, many=True)
-
-        products_lider = Product.objects.filter(store_id=2)
-        products_lider_list = build_obj_list(products_lider)
-        lider_serializer = ProductsResponseSerializer(products_lider_list, many=True)
-
-        products_jumbo = Product.objects.filter(store_id=3)
-        products_jumbo_list = build_obj_list(products_jumbo)
-        jumbo_serializer = ProductsResponseSerializer(products_jumbo_list, many=True)
-
-        return Response({"Information": "This is the lists view", "Liquidos": liquidos_serializer.data, "Lider": lider_serializer.data, "Jumbo": jumbo_serializer.data})
-
+            liquidos_serializer = ProductsResponseSerializer(liquidos_list, many=True)
+            lider_serializer = ProductsResponseSerializer(lider_list, many=True)
+            jumbo_serializer = ProductsResponseSerializer(jumbo_list, many=True)
+            mix_serializer = ProductsResponseSerializer(mix_list, many=True)
+            return Response({"Information": "This is the optimized list view", "Liquidos": liquidos_serializer.data, "Lider": lider_serializer.data, "Jumbo": jumbo_serializer.data,"Mix": mix_serializer.data})
+        return Response({"Information": "Please select what products you want to compare"})
 class ListView(APIView):
 
     def get(self, request, *args, **kwargs):
