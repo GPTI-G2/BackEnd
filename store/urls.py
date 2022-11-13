@@ -4,7 +4,8 @@ from .views import (
     ProductsView,
     ProductView,
     StoresView,
-    ListsView
+    ListsView,
+    ListView
 )
 
 urlpatterns = [
@@ -12,6 +13,7 @@ urlpatterns = [
     path("products/", ProductsView.as_view()),
     path("products/<int:product_id>", ProductView.as_view()),
     path("stores/", StoresView.as_view()),
-    path("lists/", ListsView.as_view()),
+    path("lists", ListsView.as_view()),
+    path("final_list/", ListView.as_view()),
 
 ]
