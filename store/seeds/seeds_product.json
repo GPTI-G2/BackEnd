@@ -5,7 +5,7 @@
     "fields": {
       "name": "Cerveza Corona botella",
       "store_id": 1,
-      "sku": "381938",
+      "sku": "seed1",
       "brand": "Corona",
       "size": "330 CC x6",
       "image_url": "https://www.liquidos.cl/productos/746/cerveza-corona-botella-330-cc-x6-liquidos-cl",
@@ -19,7 +19,7 @@
     "fields": {
       "name": "Cerveza Lager Botellin",
       "store_id": 2,
-      "sku": "730940",
+      "sku": "seed2",
       "brand": "Corona",
       "size": "6 Un x 330 ml c/u",
       "image_url": "https://www.lider.cl/supermercado/product/sku/993393/corona-cerveza-lager-botellin-6-un-x-330-ml-cu",
@@ -33,7 +33,7 @@
     "fields": {
       "name": "Cerveza Corona Rubia botella",
       "store_id": 3,
-      "sku": "1850069-PAK",
+      "sku": "seed3",
       "brand": "Corona",
       "size": "Pack 6 un. 330 CC",
       "image_url": "https://www.jumbo.cl/cerveza-corona-botella-6x330cc-2/p",
@@ -47,7 +47,7 @@
     "fields": {
       "name": "Pisco Especial 35º",
       "store_id": 3,
-      "sku": "1278079",
+      "sku": "seed4",
       "brand": "Alto del Carmen",
       "size": "1 L",
       "image_url": "https://www.jumbo.cl/pisco-alto-del-carmen-1-l-35/p",
@@ -61,7 +61,7 @@
     "fields": {
       "name": "Pisco Especial 35º",
       "store_id": 2,
-      "sku": "381114",
+      "sku": "seed5",
       "brand": "Alto del Carmen",
       "size": "1 L",
       "image_url": "https://www.lider.cl/supermercado/product/sku/468481/alto-del-carmen-pisco-especial-35-botella-1-l",
@@ -75,7 +75,7 @@
     "fields": {
       "name": "Pisco Alto del Carmen 35 grados",
       "store_id": 1,
-      "sku": "381756",
+      "sku": "seed6",
       "brand": "Alto del Carmen",
       "size": "1 L",
       "image_url": "https://www.liquidos.cl/productos/1180/pisco-alto-del-carmen-1-litro-35-grados-liquidos-cl",
@@ -89,7 +89,7 @@
     "fields": {
       "name": "Whisky Tennessee 40º",
       "store_id": 3,
-      "sku": "264243",
+      "sku": "seed7",
       "brand": "Jack Daniel's",
       "size": "750 cc",
       "image_url": "https://www.jumbo.cl/whisky-jack-daniels-750-cc-importado/p",
@@ -103,7 +103,7 @@
     "fields": {
       "name": "Whisky Bourbon N7",
       "store_id": 2,
-      "sku": "259732",
+      "sku": "seed8",
       "brand": "Jack Daniel's",
       "size": "750 ml",
       "image_url": "https://www.lider.cl/supermercado/product/sku/295463/jack-daniels-whisky-bourbon-n7-750-ml",
@@ -117,21 +117,21 @@
     "fields": {
       "name": "Whisky Jack Daniels N7",
       "store_id": 1,
-      "sku": "381323",
+      "sku": "seed9",
       "brand": "Jack Daniel's",
       "size": "750 cc",
       "image_url": "https://www.liquidos.cl/productos/2501/whiskey-jack-daniels-n7-750-cc-liquidos-cl",
       "price": 22990,
       "type": "w-jack"
     }
-  }, 
+  },
   {
     "model": "store.product",
     "pk": 10,
     "fields": {
       "name": "Cerveza Royal Guard Lager",
       "store_id": 3,
-      "sku": "263658-PAK",
+      "sku": "seed10",
       "brand": "Royal Guard",
       "size": "Pack 6 un. 355 CC",
       "image_url": "https://www.jumbo.cl/pack-cerveza-royal-guard-6-unid-355-cc-c-u/p",
@@ -145,7 +145,7 @@
     "fields": {
       "name": "Pack Cerveza Lager Botellas",
       "store_id": 2,
-      "sku": "375636",
+      "sku": "seed11",
       "brand": "Royal Guard",
       "size": "6 un. x 355 CC",
       "image_url": "https://www.lider.cl/supermercado/product/sku/304399/royal-guard-pack-cerveza-lager-botellas-6-un",
@@ -159,7 +159,7 @@
     "fields": {
       "name": "Cerveza Royal Guard Lager botella",
       "store_id": 1,
-      "sku": "123222",
+      "sku": "seed12",
       "brand": "Royal Guard",
       "size": "355 CC x6",
       "image_url": "https://www.liquidos.cl/productos/21710/cervezas-royal-guard-lager-botella-355-x6",
@@ -173,7 +173,7 @@
     "fields": {
       "name": "Pisco Añejado en Roble 35º",
       "store_id": 3,
-      "sku": "1461150",
+      "sku": "seed13",
       "brand": "Mistral",
       "size": "1 L",
       "image_url": "https://www.jumbo.cl/pisco-mistral-1-l-35/p",
@@ -187,7 +187,7 @@
     "fields": {
       "name": "Pisco Añejado 35º Botella",
       "store_id": 2,
-      "sku": "625859",
+      "sku": "seed14",
       "brand": "Mistral",
       "size": "1 L",
       "image_url": "https://www.lider.cl/supermercado/product/sku/589822/mistral-pisco-anejado-35-botella-1-l",
@@ -201,7 +201,7 @@
     "fields": {
       "name": "Pisco Mistral 35º grados",
       "store_id": 1,
-      "sku": "989893",
+      "sku": "seed15",
       "brand": "Mistral",
       "size": "1 L",
       "image_url": "https://www.liquidos.cl/productos/2937/pisco-mistral-35-grados-1-litro-liquidos-cl",
